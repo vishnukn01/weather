@@ -23,7 +23,7 @@ if(!empty($_GET['city'])){
 			 $weatherArray['weather'][0]['description'] = 'a '.$weatherArray['weather'][0]['description'];
 		 }
 		 
-		 $weather = "The weather in ".ucfirst($_GET['city'])." is currently '".$weatherArray['weather'][0]['description']. "'. The temperature is ".$weatherArray['main']['temp'] ." degree celcius. The humidity is ".$weatherArray['main']['humidity']." % and the wind speed is ".$weatherArray['wind']['speed']." meter/sec.";
+		 $weather = "The weather in ".ucwords($_GET['city'])." is currently '".$weatherArray['weather'][0]['description']. "'. The temperature is ".$weatherArray['main']['temp'] ." degree celcius. The humidity is ".$weatherArray['main']['humidity']." % and the wind speed is ".$weatherArray['wind']['speed']." meter/sec.";
 		}
 		else{
 		
