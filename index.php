@@ -19,6 +19,10 @@ if(!empty($_GET['city'])){
 	 
 		 $weatherArray['main']['temp'] = $weatherArray['main']['temp'] - 273.15;
 		 
+		 if($weatherArray['weather'][0]['description'] == 'few clouds'){
+			 $weatherArray['weather'][0]['description'] = 'a '.$weatherArray['weather'][0]['description'];
+		 }
+		 
 		 $weather = "The weather in ".ucfirst($_GET['city'])." is currently '".$weatherArray['weather'][0]['description']. "'. The temperature is ".$weatherArray['main']['temp'] ." degree celcius. The humidity is ".$weatherArray['main']['humidity']." % and the wind speed is ".$weatherArray['wind']['speed']." meter/sec.";
 		}
 		else{
